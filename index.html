@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <head>
+    <title>MapForWebHosting</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="http://cdn.klokantech.com/tileviewer/v1/index.css" type="text/css"/>
+    <script src="http://cdn.klokantech.com/tileviewer/v1/index.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var data = {
+        "name": "MapForWebHosting",
+        "version": "1.0.0",
+        "description": "",
+        "type": "overlay",
+        "format": "png",
+        "minzoom": "8",
+        "maxzoom": "11",
+        "bounds": "-79.09199204,44.15773335,-78.35686614,44.65496457",
+        "scale": "1.000000",
+        "profile": "mercator"
+      };
+      tileserver(data);
+    </script>
+  </body>
 </html>
