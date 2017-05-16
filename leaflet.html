@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MapForWebHosting</title>
+  <title>OpsOverlay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="http://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
   <script src="http://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
@@ -9,13 +9,13 @@
       var layer;
     function init() {
         var bounds = new L.LatLngBounds(
-            new L.LatLng(44.157733, -79.091992),
-            new L.LatLng(44.654965, -78.356866));
+            new L.LatLng(44.203409, -78.882790),
+            new L.LatLng(44.479050, -78.566699));
         var map = L.map('map').fitBounds(bounds);
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         var options = {
-            minZoom: 8,
-            maxZoom: 11,
+            minZoom: 9,
+            maxZoom: 13,
             opacity: 1.0,
             tms: false
         };

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>MapForWebHosting</title>
+<title>OpsOverlay</title>
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,13 +18,13 @@ body { width:100%; height:100%; background: #ffffff; }
 <div id="map"></div>
 <input id="slider" type="range" min="0" max="1" step="0.1" value="1" oninput="layer.setOpacity(this.value)">
 <script type="text/javascript">
-var mapExtent = ol.proj.transformExtent([-79.091992, 44.157733, -78.356866, 44.654965], 'EPSG:4326', 'EPSG:3857');
-var mapMinZoom = 8;
-var mapMaxZoom = 11;
+var mapExtent = ol.proj.transformExtent([-78.882790, 44.203409, -78.566699, 44.479050], 'EPSG:4326', 'EPSG:3857');
+var mapMinZoom = 9;
+var mapMaxZoom = 13;
 var layer = new ol.layer.Tile({
   extent: mapExtent,
   source: new ol.source.XYZ({
-    attributions: [new ol.Attribution({html: 'MapForWebHosting'})],
+    attributions: [new ol.Attribution({html: 'OpsOverlay'})],
     url: "{z}/{x}/{y}.png",
     tilePixelRatio: 1.000000,
     minZoom: mapMinZoom,
@@ -42,8 +42,8 @@ var map = new ol.Map({
     layer
   ],
   view: new ol.View({
-    center: ol.proj.fromLonLat([-78.724429, 44.406349]),
-    zoom: 9
+    center: ol.proj.fromLonLat([-78.724744, 44.341229]),
+    zoom: 10
   })
 });
 </script>
