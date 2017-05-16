@@ -62,8 +62,9 @@ proj.fromPointToLatLng(new google.maps.Point(coord.x * tileXSize, (coord.y + 1) 
 var y = coord.y;
         
 var x = coord.x >= 0 ? coord.x : z2 + coord.x
-        if (mapBounds.intersects(tileBounds) && (mapMinZoom <= zoom) && (zoom <= mapMaxZoom))
-            return zoom + "/" + x + "/" + y + ".png";
+        
+if (mapBounds.intersects(tileBounds) && (mapMinZoom <= zoom) && (zoom <= mapMaxZoom))
+ return zoom + "/" + x + "/" + y + ".png";
         
 else
  return "http://www.maptiler.org/img/none.png";
@@ -72,18 +73,22 @@ else
     tileSize: new google.maps.Size(256, 256),
     isPng: true,
 
-    opacity: 1.0
+    opacity: 0.5
 });
+
 function init() {
-    var opts = {
-        tilt:0,
-        streetViewControl: false,
-        center: new google.maps.LatLng(44.406349, -78.724429),
-        zoom: 8
-    };
+    
+	var opts = {tilt:0,
+streetViewControl: false,center: new google.maps.LatLng(44.406349, -78.724429),
+zoom: 8
+};
+
 	map = new google.maps.Map(document.getElementById("map"), opts);
+	
 	map.setMapTypeId('satellite');
+	
 	map.overlayMapTypes.insertAt(0, maptiler);
+
 }
 
 </script>
