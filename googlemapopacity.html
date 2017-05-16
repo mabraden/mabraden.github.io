@@ -4,7 +4,6 @@
         <title>Campus Map</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
         <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
         <script>
 
@@ -35,13 +34,12 @@
 
           }
         </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh3Z6en95AKcc6xaOG3alR8dsr_8j-KGA&callback=initMap"
-    async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh3Z6en95AKcc6xaOG3alR8dsr_8j-KGA&callback=init" async defer></script>
         <style>
           html, body, #map { width:100%; height:100%; margin:0; padding:0; }
         </style>
       </head>
-      <body onload="init()">
+      <body>
         <div id="map"></div>
       </body>
     </html>
