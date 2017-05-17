@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<a href="test/test.html">click here to test</a>
-
-</body>
-</html>
